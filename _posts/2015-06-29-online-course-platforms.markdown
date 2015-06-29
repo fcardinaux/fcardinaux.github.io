@@ -4,7 +4,7 @@ title:  "Online Course Platforms"
 date:   2015-06-29 09:44:00
 categories: mooc list
 ---
-The present page contains constantly updated lists of online course platforms.
+The present page contains a list of online course platforms.
 
 ### General-Purpose Platforms
 
