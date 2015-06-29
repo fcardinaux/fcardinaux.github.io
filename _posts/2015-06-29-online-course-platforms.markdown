@@ -5,7 +5,7 @@ date:   2015-06-29 12:00:00
 categories: mooc list
 comments: True
 ---
-This page contains a list of online course platforms.
+This page contains a collection of online course platforms.
 
 ## General-Purpose Platforms
 
