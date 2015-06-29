@@ -19,17 +19,15 @@ I'm available as a software developer:
 
 What I can do:
 
-* Mobile-first applications,
-* E-commerce websites,
+* Mobile-first / responsive applications,
+* E-commerce,
 * CMS-based websites,
 * Relational database modeling and optimization,
 * SQL, PL/SQL and Transact-SQL programming,
 * Multilingual applications,
-* E-mail marketing systems,
+* E-mail marketing policies and systems,
 * Requirement analysis,
-* Documentation, including policy writing,
-* Adult training, user training and engineer training,
-* Mathematics tutor.
+* Documentation, policy writing.
 
 Please don't hesitate to contact me via
 [LinkedIn](https://ch.linkedin.com/in/francoiscardinaux).
