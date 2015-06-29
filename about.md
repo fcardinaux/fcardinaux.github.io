@@ -4,8 +4,33 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+My other profiles:
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+* https://ch.linkedin.com/in/francoiscardinaux[LinkedIn]
+* https://twitter.com/fcardinaux[Twitter]
+* https://github.com/fcardinaux[GitHub]
+* http://www.experts-exchange.com/members/fcardinaux.html[Experts-Exchange]
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+I'm available as a software developer in any of the following areas:
+
+* Front-end development (Angular.js, Javascript, HTML5, CSS3, Bootstrap),
+* Back-end or full-stack development (PHP with 2 certifications, CMS like Drupal, Joomla or Wordpress),
+* Application development.
+
+What I can do:
+
+* Mobile-first applications,
+* E-commerce websites,
+* CMS-based websites,
+* Relational database modeling and optimization,
+* SQL, PL/SQL and Transact-SQL programming,
+* Multilingual applications,
+* E-mail marketing systems,
+* Requirement analysis,
+* Documentation, including policy writing,
+* Adult training, user training and engineer training,
+* Mathematics tutor.
+
+Please don't hesitate to contact me via https://ch.linkedin.com/in/francoiscardinaux[LinkedIn].
+
+Keywords: Angular.js, Bootstrap, Bower, Canvas, CoffeeScript, CSS, Design patterns, E-Commerce, Drupal, E-Mail Marketing, Erlang, Gamification, Google Apps Script, Google Closure Compiler, Google Apps Script, Grunt, HTML5, Jade, Jasmine, Javascript, Joomla, jQuery, jQuery Mobile, LAMP, Less, MailChimp, MySQL, Node.js, NPM, Oracle, Parsers, PHP, PL/SQL, Plugins, PostgreSQL, REST, Sass, SCSS, Selenium, SQL, SQL Server, SQLite, SVG, Transact SQL, web services, web software.
