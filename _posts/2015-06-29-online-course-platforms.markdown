@@ -3,6 +3,7 @@ layout: post
 title:  "Online Course Platforms"
 date:   2015-06-29 12:00:00
 categories: mooc list
+comments: true
 ---
 This page contains a list of online course platforms.
 
