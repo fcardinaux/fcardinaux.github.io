@@ -53,6 +53,16 @@ __[University of Maryland](http://www.umd.edu/)__:
 
 * [Master of Technology Entepreneurship](http://mte.umd.edu/)
 
+## Private Learning Environments
+
+General-purpose platforms:
+
+* __[LearningStone](https://www.learningstone.com/)__: learning and collaboration for professional training and coaching.
+
+Language training platforms:
+
+* __[SpeedLingua](http://home.speedlingua.com/en/)__: for schools and corporations.
+
 ## Tools
 
 General-purpose tools:
