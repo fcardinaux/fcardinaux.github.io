@@ -6,10 +6,10 @@ permalink: /about/
 
 My other profiles:
 
-* [https://ch.linkedin.com/in/francoiscardinaux](LinkedIn)
-* https://twitter.com/fcardinaux[Twitter]
-* https://github.com/fcardinaux[GitHub]
-* http://www.experts-exchange.com/members/fcardinaux.html[Experts-Exchange]
+* [LinkedIn](https://ch.linkedin.com/in/francoiscardinaux)
+* [Twitter](https://twitter.com/fcardinaux)
+* [GitHub](https://github.com/fcardinaux)
+* [Experts-Exchange](http://www.experts-exchange.com/members/fcardinaux.html)
 
 I'm available as a software developer in any of the following areas:
 
@@ -31,6 +31,7 @@ What I can do:
 * Adult training, user training and engineer training,
 * Mathematics tutor.
 
-Please don't hesitate to contact me via https://ch.linkedin.com/in/francoiscardinaux[LinkedIn].
+Please don't hesitate to contact me via
+[LinkedIn](https://ch.linkedin.com/in/francoiscardinaux).
 
 Keywords: Angular.js, Bootstrap, Bower, Canvas, CoffeeScript, CSS, Design patterns, E-Commerce, Drupal, E-Mail Marketing, Erlang, Gamification, Google Apps Script, Google Closure Compiler, Google Apps Script, Grunt, HTML5, Jade, Jasmine, Javascript, Joomla, jQuery, jQuery Mobile, LAMP, Less, MailChimp, MySQL, Node.js, NPM, Oracle, Parsers, PHP, PL/SQL, Plugins, PostgreSQL, REST, Sass, SCSS, Selenium, SQL, SQL Server, SQLite, SVG, Transact SQL, web services, web software.
