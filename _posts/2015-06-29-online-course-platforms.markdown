@@ -27,11 +27,11 @@ Platforms that are bound to educational institutions:
 
 ### Technology-Oriented Platforms
 
-Privately sponsored platforms:
+Privately owned or sponsored platforms:
 
-* __[Code School](https://www.codeschool.com/)__ (non-free): learn current web technologies.
-* __[FullStack Academy of Code](http://www.fullstackacademy.com/)__: become a software developer from amateur to professional in 13 weeks.
-* __[Interaction Design Foundation](https://www.interaction-design.org/courses/)__: user experience (UX) courses.
+* __[Code School](https://www.codeschool.com/)__ (non-free): to learn current web technologies.
+* __[FullStack Academy of Code](http://www.fullstackacademy.com/)__: to become a software developer from amateur to professional in 13 weeks.
+* __[Interaction Design Foundation](https://www.interaction-design.org/courses/)__: courses on user experience (UX).
 * __[MongoDB University](https://university.mongodb.com/)__: MongoDB courses and certifications.
 * __[Udacity](https://www.udacity.com)__: you can earn "nanodegrees" in software development (front-end, full-stack, mobile) and in data analysis.
 
@@ -45,7 +45,7 @@ __[Northeastern University](http://www.northeastern.edu/)__ ([New Ventures](http
 
 __[Northeastern University](http://www.northeastern.edu/)__ ([New Ventures](http://www.northeastern.edu/newventures/)):
 
-* [Experiential Network](http://experientialnetwork.org/): work on various types of academic projects with real-world applicability, connect with companies and build your network.
+* [Experiential Network](http://experientialnetwork.org/): work on various types of academic projects with real-world applicability. Connect with companies and build your network.
 
 ### Online Academic Degrees
 
@@ -59,7 +59,7 @@ General-purpose tools:
 
 * __[CourseTalk](https://www.coursetalk.com/)__: a search tool for online courses, with student reviews.
 
-For Coursera:
+For [Coursera](https://www.coursera.org/):
 
 * __[coursera-dl](https://github.com/dgorissen/coursera-dl)__: A script for downloading course material (video's, pdfs, quizzes, etc) from coursera.org
 
