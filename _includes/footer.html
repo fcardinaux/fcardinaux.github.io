@@ -56,6 +56,18 @@
             </a>
           </li>
           {% endif %}
+
+          {% if site.xing_username %}
+          <li>
+            <a href="https://www.xing.com/profile/{{ site.xing_username }}">
+              <span>
+                  Xing:
+              </span>
+
+              <span class="username">{{ site.xing_username }}</span>
+            </a>
+          </li>
+          {% endif %}
         </ul>
       </div>
 
