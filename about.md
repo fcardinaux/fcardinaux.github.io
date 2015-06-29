@@ -6,7 +6,7 @@ permalink: /about/
 
 My other profiles:
 
-* https://ch.linkedin.com/in/francoiscardinaux[LinkedIn]
+* [https://ch.linkedin.com/in/francoiscardinaux](LinkedIn)
 * https://twitter.com/fcardinaux[Twitter]
 * https://github.com/fcardinaux[GitHub]
 * http://www.experts-exchange.com/members/fcardinaux.html[Experts-Exchange]
