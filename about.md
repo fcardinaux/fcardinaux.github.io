@@ -11,7 +11,7 @@ My other profiles:
 * [GitHub](https://github.com/fcardinaux)
 * [Experts-Exchange](http://www.experts-exchange.com/members/fcardinaux.html)
 
-I'm available as a software developer in any of the following areas:
+I'm available as a software developer:
 
 * Front-end development (Angular.js, Javascript, HTML5, CSS3, Bootstrap),
 * Back-end or full-stack development (PHP with 2 certifications, CMS like Drupal, Joomla or Wordpress),
