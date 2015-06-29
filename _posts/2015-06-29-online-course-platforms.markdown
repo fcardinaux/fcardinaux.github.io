@@ -23,7 +23,7 @@ European platforms:
 Platforms that are bound to educational institutions:
 
 * __[MIT OpenCourseWare](http://ocw.mit.edu/index.htm)__
-* __[Open2Study](https://www.open2study.com/)__: created by the [Open Universities Australia](https://www.open.edu.au/)
+* __[Open2Study](https://www.open2study.com/)__: created by the [Open Universities Australia](https://www.open.edu.au/).
 * __[Stanford Online](http://online.stanford.edu/)__
 
 ## Technology-Oriented Platforms
@@ -38,21 +38,21 @@ Privately owned or sponsored platforms:
 
 ## Online Legal and Professional Studies
 
-__[Northeastern University](http://www.northeastern.edu/)__ ([New Ventures](http://www.northeastern.edu/newventures/)):
+[Northeastern University](http://www.northeastern.edu/) ([New Ventures](http://www.northeastern.edu/newventures/)):
 
-* [LearnX](http://www.learnx.co/): more than 80 modules in legal and professional studies.
+* __[LearnX](http://www.learnx.co/)__: more than 80 modules in legal and professional studies.
 
 ## Project-Oriented Platforms
 
-__[Northeastern University](http://www.northeastern.edu/)__ ([New Ventures](http://www.northeastern.edu/newventures/)):
+[Northeastern University](http://www.northeastern.edu/) ([New Ventures](http://www.northeastern.edu/newventures/)):
 
-* [Experiential Network](http://experientialnetwork.org/): work on various types of academic projects with real-world applicability. Connect with companies and build your network.
+* __[Experiential Network](http://experientialnetwork.org/)__: work on various types of academic projects with real-world applicability. Connect with companies and build your network.
 
 ## Online Academic Degrees
 
-__[University of Maryland](http://www.umd.edu/)__:
+[University of Maryland](http://www.umd.edu/):
 
-* [Master of Technology Entepreneurship](http://mte.umd.edu/)
+* __[Master of Technology Entepreneurship](http://mte.umd.edu/)__
 
 ## Private Learning Environments
 
