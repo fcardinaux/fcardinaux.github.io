@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "How To Enable Line Wrapping For AsciiDoc Files in Light Table"
-date:   2015-09-10 12:00:00
+title:  "Light Table: How To Enable Line Wrapping For AsciiDoc Files"
+date:   2015-09-10 12:00:01
 categories: asciidoc lighttable howto
 comments: True
 ---
