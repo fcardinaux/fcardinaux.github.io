@@ -94,6 +94,9 @@ figure { margin: 0; }
 figure svg { width: 100%; height: auto; display: block; }
 figcaption { color: var(--muted); font-size: 14px; margin-top: 10px; }
 figcaption b { color: var(--ink); font-weight: 500; }
+/* Quiet on purpose: the board is the point, the link is for afterwards. */
+#lichess { color: inherit; font-size: 13px; white-space: nowrap; }
+#lichess:hover { color: var(--ink); }
 .credit { display: block; font-size: 12px; margin-top: 6px; }
 .credit a { color: inherit; }
 .pb { filter: var(--rim); }

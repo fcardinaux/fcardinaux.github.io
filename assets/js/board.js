@@ -119,6 +119,10 @@ function show(index) {
   blinkKnights();
   const caption = document.getElementById('caption');
   caption.innerHTML = p.caption;
+  // The same position on Lichess's analysis board, in a new tab so the page
+  // stays open behind it. The FEN goes in the path with underscores for spaces.
+  document.getElementById('lichess').href =
+    'https://lichess.org/analysis/standard/' + p.fen.replaceAll(' ', '_');
   svg.setAttribute('aria-label', 'Chess position: ' + caption.textContent);
 }
 document.getElementById('another').addEventListener('click',

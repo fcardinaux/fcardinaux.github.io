@@ -26,7 +26,7 @@
   .url { color: var(--accent); font-size: 24px; font-weight: 500; }
   #board { width: 500px; height: 500px; flex: none; }
   /* board.js writes to these; the card does not show them. */
-  #caption, #another { display: none; }
+  #caption, #lichess, #another { display: none; }
 </style>
 </head>
 <body>
@@ -36,7 +36,7 @@
     <div class="url">fcardinaux.github.io</div>
   </div>
   <svg id="board" viewBox="0 0 100 100"></svg>
-  <span id="caption"></span><button id="another" type="button"></button>
+  <span id="caption"></span><a id="lichess"></a><button id="another" type="button"></button>
   <script src="../assets/js/pieces.js"></script>
   <script src="../assets/js/board.js"></script>
 </body>
