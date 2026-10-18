@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<title>Social card</title>
+<!-- The image shown when a link to this site is shared: assets/social.png,
+     1200x630, the size link previews expect. Jekyll skips this folder (its name
+     starts with an underscore), so it is not part of the site. It draws the
+     home page's board with the home page's own scripts and styles, so the card
+     follows the site. To remake the PNG, from the repository root:
+
+       python3 -m http.server 8765 &
+       "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+         --hide-scrollbars --window-size=1200,630 --virtual-time-budget=2000 \
+         --screenshot=assets/social.png "http://127.0.0.1:8765/_social/card.html?p=1"
+
+     ?p=1 is the Immortal Game: a full board reads better at thumbnail size
+     than the Réti study's four pieces. -->
+<link rel="stylesheet" href="../assets/css/site.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body { display: flex; align-items: center; gap: 56px; padding: 0 64px 0 72px; box-sizing: border-box; }
+  .text { flex: 1; }
+  .name { display: block; font-size: 28px; margin-bottom: 40px; }
+  h1 { font-size: 62px; margin-bottom: 40px; }
+  .url { color: var(--accent); font-size: 24px; font-weight: 500; }
+  #board { width: 500px; height: 500px; flex: none; }
+  /* board.js writes to these; the card does not show them. */
+  #caption, #another { display: none; }
+</style>
+</head>
+<body>
+  <div class="text">
+    <span class="name">François Cardinaux</span>
+    <h1>Code, notes, and the occasional <em>chess position</em>.</h1>
+    <div class="url">fcardinaux.github.io</div>
+  </div>
+  <svg id="board" viewBox="0 0 100 100"></svg>
+  <span id="caption"></span><button id="another" type="button"></button>
+  <script src="../assets/js/pieces.js"></script>
+  <script src="../assets/js/board.js"></script>
+</body>
+</html>
