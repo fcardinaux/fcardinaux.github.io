@@ -53,7 +53,7 @@ function blinkKnights() {
       blinkTimers[i] = setTimeout(() => {
         g.classList.add('blink');
         blinkTimers[i] = setTimeout(() => { g.classList.remove('blink'); later(); }, BLINK_MS);
-      }, 3000 + Math.random() * 7000);
+      }, 4500 + Math.random() * 10500);
     };
     later();
   });
