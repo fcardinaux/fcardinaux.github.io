@@ -39,20 +39,21 @@ function piece(key, x, y) {
 }
 
 // Each knight blinks on its own clock, every few seconds, so they never
-// blink together for long.
+// blink together for long. The class comes off again once the blink is over
+// (it lasts 0.3 s, see .blink in site.css), so the next one starts afresh:
+// re-adding a class that is still there restarts nothing.
+const BLINK_MS = 350;
 let blinkTimers = [];
 function blinkKnights() {
   blinkTimers.forEach(clearTimeout);
   blinkTimers = [];
-  svg.querySelectorAll('g').forEach(g => {
+  svg.querySelectorAll('g').forEach((g, i) => {
     if (!g.querySelector('.lid')) return;
     const later = () => {
-      blinkTimers.push(setTimeout(() => {
-        g.classList.remove('blink');
-        void g.getBoundingClientRect();  // restart the animation
+      blinkTimers[i] = setTimeout(() => {
         g.classList.add('blink');
-        later();
-      }, 1500 + Math.random() * 3500));
+        blinkTimers[i] = setTimeout(() => { g.classList.remove('blink'); later(); }, BLINK_MS);
+      }, 1500 + Math.random() * 3500);
     };
     later();
   });

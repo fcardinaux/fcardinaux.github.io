@@ -101,7 +101,7 @@ figcaption b { color: var(--ink); font-weight: 500; }
 .pw .ball { fill: var(--white-ball) !important; }
 /* A knight blinks: its eyelids close and open again. */
 .lid { transform-box: fill-box; transform-origin: center; transform: scaleY(0); }
-.blink .lid { animation: blink .4s ease-in-out; }
+.blink .lid { animation: blink .3s ease-in-out; }
 @keyframes blink { 50% { transform: scaleY(1); } }
 @media (prefers-reduced-motion: reduce) { .blink .lid { animation: none; } }
 #theme {
