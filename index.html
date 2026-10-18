@@ -1,23 +1,83 @@
 ---
 layout: default
+scripts:
+  - /assets/js/pieces.js
+  - /assets/js/board.js
 ---
+{% comment %}
+  The template previews come straight from the study-templates site, so they
+  are always the current ones; they live on the same host.
+{% endcomment %}
+{% assign previews = "https://fcardinaux.github.io/study-templates/previews/" %}
+{% assign posts = site.posts | where_exp: "post", "post.archived != true" %}
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="hero">
+  <div>
+    <h1>Code, notes, and the occasional <em>chess position</em>.</h1>
+    <div class="intro">
+      <p>Trained as an electrical engineer at EPFL, I soldered until 1995, typed
+      code until recently, and now mostly whisper to machines.</p>
+      <p>I've played chess for some fifty years, but only seriously since 2025,
+      when I joined a club and began to study. A new e-ink tablet called for pages
+      with a board and room to write, so I designed the templates below and let
+      Claude do the typing.</p>
+    </div>
+  </div>
+  <figure>
+    <svg id="board" viewBox="0 0 100 100" role="img" aria-label="A chess position"></svg>
+    <figcaption><span id="caption"></span>
+      <button id="another" type="button">Another position</button>
+      <span class="credit">Pieces: <a href="https://github.com/neverRare/kiwen-suwi">kiwen-suwi</a> by neverRare,
+        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</span></figcaption>
+  </figure>
 </div>
+
+<section id="chess">
+  <h2>Chess</h2>
+  <p class="lead">Templates for studying, and the move generators I wrote along the way.</p>
+
+  <div class="feature">
+    <div class="sheets">
+      <img src="{{ previews }}chess-cornell-dots.png" alt="Cornell notes template with a dot grid">
+      <img src="{{ previews }}chess-3-boards-alternate.png" alt="Three boards, alternating, with ruled lines">
+      <img src="{{ previews }}chess-scoresheet.png" alt="Scoresheet with two diagrams">
+    </div>
+    <div>
+      <h3>Chess Study Templates</h3>
+      <p>Blank boards with room to write, so a position and the notes about it
+      live on the same page. Eleven layouts, three board views, three page sizes —
+      vector PDFs for tablet note apps or printing. Free, CC BY 4.0.</p>
+      <a class="button" href="https://fcardinaux.github.io/study-templates/">Download</a>
+      <a href="https://github.com/fcardinaux/study-templates">Source</a>
+    </div>
+  </div>
+
+  <div class="cards">
+    <a class="card" href="https://github.com/fcardinaux/chessfold">
+      <span class="meta">Erlang · GPL-3.0</span>
+      <h3>chessfold</h3>
+      <p>Chess move generator: reads a position in FEN and returns every legal
+      move, or the position after a move. Verified against a perft suite.</p>
+    </a>
+    <a class="card" href="https://github.com/fcardinaux/chess-move-generator.js">
+      <span class="meta">CoffeeScript → JavaScript · GPL-3.0</span>
+      <h3>chess-move-generator.js</h3>
+      <p>Bitboard move generator for Node.js and the browser: FEN in, every legal
+      move out. Verified against a perft suite.</p>
+    </a>
+  </div>
+  <p class="more"><a href="https://github.com/stars/fcardinaux/lists/chess">More chess repositories I follow →</a></p>
+</section>
+
+<section id="writing">
+  <h2>Writing</h2>
+  <p class="lead">Occasional posts.</p>
+  <ul class="posts">
+    {% for post in posts %}
+    <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    {% if posts.size == 0 %}
+    <li><time>Coming soon</time><span class="soon">Positions and notes on the same page — the chess study templates</span></li>
+    {% endif %}
+  </ul>
+</section>

@@ -1,10 +1,12 @@
 # Site settings
 title: François Cardinaux
-# email: your-email@domain.com
+description: >-
+  Trained as an electrical engineer at EPFL, I soldered until 1995, typed code
+  until recently, and now mostly whisper to machines. Chess study templates and
+  occasional posts.
 
-baseurl: "" # the subpath of your site, e.g. /blog/
-
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://fcardinaux.github.io"
+baseurl: ""
 
 twitter_username:   fcardinaux
 github_username:    fcardinaux
@@ -13,3 +15,9 @@ linkedin_username:  francoiscardinaux
 # Build settings
 markdown: kramdown
 
+# Not part of the site.
+exclude:
+  - readme.adoc
+  - Gemfile
+  - Gemfile.lock
+  - vendor

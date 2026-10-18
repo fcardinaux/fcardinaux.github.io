@@ -3,7 +3,7 @@ layout: post
 title:  "Light Table: How To Enable Line Wrapping For AsciiDoc Files"
 date:   2015-09-10 12:00:01
 categories: asciidoc lighttable howto
-comments: True
+archived: true
 ---
 By default, line wrapping is enabled for plain-text and Markdown files only, not for AsciiDoc files.
 

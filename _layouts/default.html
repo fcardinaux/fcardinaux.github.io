@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body>
+<div class="wrap">
 
-  {% include head.html %}
+{% include header.html %}
 
-  <body>
+<main>
+{{ content }}
+</main>
 
-    {% include header.html %}
+{% include footer.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-      <div class="wrapper">
-        {% include comments.html %}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-    {% include google_analytics.html %}
-
-  </body>
-
+</div>
+<script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+{% for script in page.scripts %}<script src="{{ script | relative_url }}"></script>
+{% endfor %}</body>
 </html>
