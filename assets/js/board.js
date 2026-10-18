@@ -52,7 +52,7 @@ function blinkKnights() {
         void g.getBoundingClientRect();  // restart the animation
         g.classList.add('blink');
         later();
-      }, 2500 + Math.random() * 6000));
+      }, 1500 + Math.random() * 3500));
     };
     later();
   });
