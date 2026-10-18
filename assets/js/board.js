@@ -1,16 +1,30 @@
 // The hero board on the home page. Needs assets/js/pieces.js first.
 
-// The board shows one of these, chosen by the minute (see positionForMinute).
-// Add a position by adding an entry: a FEN (only the placement field is read)
-// and a caption.
+// The board opens on the first of these, always: the Immortal Game has two
+// knights, and the knights blink. "Another position" steps through the rest in
+// order. Add a position by adding an entry: a FEN (only the placement field is
+// read) and a caption. Each final position here was checked by replaying the
+// game's moves with a chess library, not copied by hand.
 const POSITIONS = [
-  {
-    fen: '7K/8/k1P5/7p/8/8/8/8 w - - 0 1',
-    caption: '<b>Richard Réti, 1921.</b> White to play and draw. The king looks hopelessly far from both pawns — and gets to both.',
-  },
   {
     fen: 'r1bk3r/p2pBpNp/n4n2/1p1NP2P/6P1/3P4/P1P1K3/q5b1 b - - 1 23',
     caption: '<b>Anderssen–Kieseritzky, London 1851</b>, the Immortal Game. White has given up a bishop, both rooks and the queen — and it is mate.',
+  },
+  {
+    fen: '1n1Rkb1r/p4ppp/4q3/4p1B1/4P3/8/PPP2PPP/2K5 b k - 1 17',
+    caption: '<b>Morphy against the Duke of Brunswick and Count Isouard, Paris 1858</b>, the Opera Game. Seventeen moves: quick development, a queen sacrifice, and mate with White\'s last two pieces.',
+  },
+  {
+    fen: '1r3kr1/pbpBBp1p/1b3P2/8/8/2P2q2/P4PPP/3R2K1 b - - 0 24',
+    caption: '<b>Anderssen–Dufresne, Berlin 1852</b>, the Evergreen Game. Black\'s queen is one move from mate on g2 — but White gets there first.',
+  },
+  {
+    fen: '8/8/1KP5/3r4/8/8/8/k7 w - - 0 1',
+    caption: '<b>The Saavedra position, 1895.</b> White to play and win. The pawn queens — no: a queen would be stalemate. It becomes a rook.',
+  },
+  {
+    fen: '7K/8/k1P5/7p/8/8/8/8 w - - 0 1',
+    caption: '<b>Richard Réti, 1921.</b> White to play and draw. The king looks hopelessly far from both pawns — and gets to both.',
   },
 ];
 
@@ -97,18 +111,6 @@ function draw(fen) {
   });
 }
 
-// The position depends on the minute, not on the reload: everyone who opens
-// the page in the same minute sees the same board, and a reload within the
-// minute changes nothing. The minute number is hashed, so the order is not a
-// plain cycle through the list.
-function positionForMinute(minute) {
-  let h = minute | 0;
-  h = Math.imul(h ^ (h >>> 16), 0x45d9f3b);
-  h = Math.imul(h ^ (h >>> 16), 0x45d9f3b);
-  h ^= h >>> 16;
-  return (h >>> 0) % POSITIONS.length;
-}
-
 let current;
 function show(index) {
   current = index;
@@ -123,4 +125,4 @@ document.getElementById('another').addEventListener('click',
   () => show((current + 1) % POSITIONS.length));
 // ?p=<index> shows a given position, for checking each one.
 const forced = new URLSearchParams(location.search).get('p');
-show(POSITIONS[forced] ? Number(forced) : positionForMinute(Math.floor(Date.now() / 60000)));
+show(POSITIONS[forced] ? Number(forced) : 0);
