@@ -119,12 +119,17 @@ function show(index) {
   blinkKnights();
   const caption = document.getElementById('caption');
   caption.innerHTML = p.caption;
-  // The same position on Lichess's analysis board, in a new tab so the page
-  // stays open behind it. The FEN goes in the path with underscores for spaces.
+  // The same position on Lichess's analysis board. The FEN goes in the path
+  // with underscores for spaces.
   document.getElementById('lichess').href =
     'https://lichess.org/analysis/standard/' + p.fen.replaceAll(' ', '_');
   svg.setAttribute('aria-label', 'Chess position: ' + caption.textContent);
 }
+// On a computer the link opens a new tab, so the page stays open behind it.
+// Not on a touch screen: there, iOS Safari ignored the tap on a new-tab link
+// to Lichess altogether, and Back returns to the page anyway.
+if (matchMedia('(hover: hover) and (pointer: fine)').matches)
+  document.getElementById('lichess').target = '_blank';
 document.getElementById('another').addEventListener('click',
   () => show((current + 1) % POSITIONS.length));
 // ?p=<index> shows a given position, for checking each one.
