@@ -4,10 +4,15 @@ title: The 128 GB Club
 description: Open-weight AI models for machines with 128 GB of unified memory - what fits, what runs, and what users say.
 ---
 <style>
-  .club-hero { display:flex; gap:24px; align-items:center; flex-wrap:wrap; margin:8px 0 24px; }
-  .club-hero .logo { width:120px; height:120px; flex:none; }
-  .club-hero .chip { width:120px; height:120px; flex:none; }
-  .club-hero p { flex:1 1 200px; margin:0; font-size:1.1em; }
+  .club-hero { display:grid; grid-template-columns:120px 1fr 120px; grid-template-areas:"logo text chip"; gap:24px; align-items:center; margin:8px 0 24px; }
+  .club-hero .logo { grid-area:logo; width:120px; height:120px; }
+  .club-hero .chip { grid-area:chip; width:120px; height:120px; }
+  .club-hero p { grid-area:text; margin:0; font-size:1.1em; }
+  /* Phones: the two pictures side by side, the text below. */
+  @media (max-width: 600px) {
+    .club-hero { grid-template-columns:1fr 1fr; grid-template-areas:"logo chip" "text text"; gap:16px; }
+    .club-hero .logo, .club-hero .chip { width:96px; height:96px; justify-self:center; }
+  }
   .club-parts { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap:14px; margin:16px 0 24px; }
   .club-parts div { border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:var(--surface); }
   .club-parts h3 { margin:0 0 6px; font-size:1em; }
