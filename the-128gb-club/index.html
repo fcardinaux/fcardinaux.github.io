@@ -13,11 +13,82 @@ description: Open-weight AI models for machines with 128 GB of unified memory - 
     .club-hero { grid-template-columns:1fr 1fr; grid-template-areas:"logo chip" "text text"; gap:16px; }
     .club-hero .logo, .club-hero .chip { width:96px; height:96px; justify-self:center; }
   }
-  .club-parts { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap:14px; margin:16px 0 24px; }
-  .club-parts div { border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:var(--surface); }
-  .club-parts h3 { margin:0 0 6px; font-size:1em; }
-  .club-parts p { margin:0; color:var(--muted); font-size:.95em; }
   .club-cta a { font-weight:600; }
+  /* Tabs */
+  .club-tabs { display:flex; gap:4px; border-bottom:1px solid var(--line); margin:28px 0 18px; overflow-x:auto; scrollbar-width:none; }
+  .club-tabs a { padding:10px 14px; color:var(--muted); text-decoration:none; font-weight:600; border-bottom:2px solid transparent; margin-bottom:-1px; white-space:nowrap; }
+  .club-tabs a[aria-selected="true"] { color:var(--ink); border-bottom-color:var(--accent); }
+  .club-panel .lead { margin:0 0 12px; color:var(--muted); }
+  .tax-list { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; }
+  .tax-list a { padding:6px 12px; border:1px solid var(--line); border-radius:999px; text-decoration:none; font-size:.92em; background:var(--surface); }
+  .tax-list a[aria-current="true"] { border-color:var(--accent); color:var(--accent); font-weight:600; }
+  .club-doc { overflow-wrap:anywhere; }
+  .club-doc h1 { font-size:1.5em; margin:0 0 12px; }
+  .club-doc h2 { font-size:1.2em; margin:24px 0 8px; }
+  .club-doc h3 { font-size:1.05em; margin:18px 0 6px; }
+  .club-doc .table-wrap { overflow-x:auto; margin:0 0 16px; }
+  .club-doc table { border-collapse:collapse; font-size:.88em; min-width:100%; }
+  .club-doc td:first-child { min-width:7em; }
+  .club-doc th, .club-doc td { border:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  .club-doc th { background:var(--surface); }
+  .club-doc code { font-size:.9em; }
+  @media (max-width: 600px) {
+    .club-tabs a { padding:10px 9px; font-size:.95em; }
+    .club-doc table, .club-doc tbody, .club-doc tr, .club-doc td { display:block; width:auto; min-width:0; }
+    .club-doc thead { display:none; }
+    .club-doc tr { border:1px solid var(--line); border-radius:8px; margin:0 0 10px; padding:6px 10px; background:var(--surface); }
+    .club-doc td { border:0; padding:3px 0; }
+    .club-doc td:first-child { font-weight:700; }
+    .club-doc td[data-label]:not(:first-child)::before { content:attr(data-label) ": "; color:var(--muted); font-size:.9em; }
+    .club-doc td:empty { display:none; }
+  }
+  .club-doc .doc-src { color:var(--muted); font-size:.88em; margin-top:20px; }
+  /* Model browser */
+  #club-browser { margin:28px 0 32px; }
+  #club-browser h2 { margin:0 0 4px; }
+  #club-browser .lead { margin:0 0 12px; color:var(--muted); }
+  .filters { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap:10px; margin:0 0 10px; }
+  .filters label { display:flex; flex-direction:column; gap:4px; font-size:.85em; color:var(--muted); }
+  .filters label.check { flex-direction:row; align-items:center; gap:8px; align-self:end; padding-bottom:9px; color:var(--ink); font-size:.95em; }
+  .filters input[type=search], .filters select { font:inherit; font-size:16px; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:8px 10px; width:100%; box-sizing:border-box; }
+  .filters input[type=checkbox] { width:18px; height:18px; accent-color:var(--accent); }
+  .browser-bar { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; align-items:baseline; margin:4px 0 12px; color:var(--muted); font-size:.9em; }
+  .browser-bar button { font:inherit; color:var(--accent); background:none; border:0; padding:0; cursor:pointer; text-decoration:underline; }
+  .model { border:1px solid var(--line); border-radius:10px; background:var(--surface); margin:0 0 10px; }
+  .model > summary { list-style:none; cursor:pointer; padding:12px 14px; display:flex; flex-direction:column; gap:6px; }
+  .model > summary::-webkit-details-marker { display:none; }
+  .model > summary:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:10px; }
+  .model .head { display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 10px; }
+  .model .head::before { content:"▸"; color:var(--muted); font-size:.85em; }
+  .model[open] .head::before { content:"▾"; }
+  .model .name { font-weight:700; }
+  .model .cat { color:var(--muted); font-size:.85em; }
+  .model .usage { font-size:.95em; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { font-size:.78em; line-height:1.2; padding:3px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); white-space:nowrap; }
+  .chip.lic { color:var(--accent); border-color:var(--accent); }
+  .chip.lic.other, .chip.warn { color:#b5651d; border-color:#b5651d; }
+  .chip.pos { color:#2e8b57; border-color:#2e8b57; }
+  .chip.neg { color:#c0392b; border-color:#c0392b; }
+  .model .body { padding:0 14px 14px; border-top:1px solid var(--line); overflow-wrap:anywhere; }
+  .model h4 { margin:14px 0 6px; font-size:.95em; }
+  .model .body p { margin:0 0 8px; }
+  .model .note, .model .src { color:var(--muted); font-size:.88em; }
+  .comments { list-style:none; padding:0; margin:8px 0; }
+  .comments li { display:flex; gap:8px; margin:0 0 8px; font-size:.93em; }
+  .comments .mark { flex:none; width:1.2em; text-align:center; font-weight:700; color:var(--muted); }
+  .comments .positive .mark { color:#2e8b57; }
+  .comments .negative .mark { color:#c0392b; }
+  .facts-wrap { overflow-x:auto; }
+  .facts { border-collapse:collapse; width:100%; font-size:.9em; }
+  .facts th { text-align:left; vertical-align:top; padding:6px 10px 6px 0; white-space:nowrap; color:var(--muted); font-weight:600; }
+  .facts td { padding:6px 0; vertical-align:top; }
+  .facts tr + tr th, .facts tr + tr td { border-top:1px solid var(--line); }
+  @media (max-width: 600px) { .facts th { white-space:normal; width:34%; } }
+  .sources { padding-left:18px; font-size:.9em; }
+  .permalink { font-size:.88em; margin-top:10px !important; }
+  .empty { color:var(--muted); }
+  #club-browser:not(.ready) .filters, #club-browser:not(.ready) .browser-bar { opacity:.5; pointer-events:none; }
 </style>
 
 <div class="club-hero">
@@ -69,12 +140,73 @@ description: Open-weight AI models for machines with 128 GB of unified memory - 
 
 <p>For machines whose CPU and GPU share 128&nbsp;GB: <strong>Apple silicon</strong> Macs first (MLX, llama.cpp, Ollama), then <strong>AMD Ryzen AI Max+ (Strix Halo)</strong> and <strong>NVIDIA DGX Spark</strong>, where the same size limits apply.</p>
 
-<div class="club-parts">
-  <div><h3><a href="https://github.com/fcardinaux/the-128gb-club/blob/main/model-comparison.md">Model comparison</a></h3><p>One record per model: licence, size, formats, publisher, release date, runtimes, and short summaries of user feedback, always with the link and the date.</p></div>
-  <div><h3><a href="https://github.com/fcardinaux/the-128gb-club/tree/main/taxonomies">Taxonomies</a></h3><p>Image, music, speech, documents, vision and 3D, retrieval, code, video and time series: what each kind of model does, and the main open candidates.</p></div>
-  <div><h3><a href="https://github.com/fcardinaux/the-128gb-club/blob/main/glossary.md">Glossary</a></h3><p>Terms, software and organisations, with French, German and Italian translations.</p></div>
-  <div><h3><a href="https://github.com/fcardinaux/the-128gb-club/blob/main/research-method.md">Research method</a></h3><p>Where facts and feedback come from, how recent they must be, and how third-party conversions are checked.</p></div>
+
+<div class="club-tabs" role="tablist" aria-label="Sections">
+  <a href="#models" role="tab" data-tab="models">Models</a>
+  <a href="#taxonomies" role="tab" data-tab="taxonomies">Taxonomies</a>
+  <a href="#glossary" role="tab" data-tab="glossary">Glossary</a>
+  <a href="#method" role="tab" data-tab="method">Method</a>
 </div>
+
+<div class="club-panel" data-panel="models" role="tabpanel">
+<div id="club-browser" data-src="models.json?v={{ site.time | date: '%s' }}">
+  <p class="lead">Every record, with its facts, sources and what users say. Tap a model to open it. Also as <a href="https://github.com/fcardinaux/the-128gb-club/blob/main/model-comparison.md">one table on GitHub</a>.</p>
+  <div class="filters">
+    <label>Search<input type="search" data-k="q" placeholder="Name, use or publisher" autocomplete="off"></label>
+    <label>Category<select data-k="cat"><option value="">All categories</option></select></label>
+    <label>Licence<select data-k="lic">
+      <option value="">Any licence</option>
+      <option value="open">Apache 2.0 or MIT</option>
+      <option value="Apache 2.0">Apache 2.0</option>
+      <option value="MIT">MIT</option>
+      <option value="other">Other licences</option>
+    </select></label>
+    <label>User feedback<select data-k="fb">
+      <option value="">Any</option>
+      <option value="some">Moderate or rich</option>
+      <option value="thin">Thin</option>
+      <option value="none">None found</option>
+    </select></label>
+    <label>Sort<select data-k="sort">
+      <option value="">By category</option>
+      <option value="new">Newest first</option>
+      <option value="small">Smallest first</option>
+      <option value="feedback">Most comments</option>
+    </select></label>
+    <label class="check"><input type="checkbox" data-k="fits"> Fits in 128&nbsp;GB</label>
+  </div>
+  <div class="browser-bar"><span><strong data-k="count">Loading…</strong> <span class="updated"></span></span><button type="button" data-k="reset">Reset filters</button></div>
+  <div data-k="list"></div>
+  <noscript><p>The list needs JavaScript. See the <a href="https://github.com/fcardinaux/the-128gb-club/blob/main/model-comparison.md">comparison on GitHub</a>.</p></noscript>
+</div>
+</div>
+
+<div class="club-panel" data-panel="taxonomies" role="tabpanel" hidden>
+  <p class="lead">What each kind of model does, how the tools fit together, and the main open candidates.</p>
+  <div class="tax-list" role="navigation" aria-label="Taxonomies">
+      <a href="#taxonomies/image-tools" data-doc="taxonomies/image-tools.md">Image</a>
+      <a href="#taxonomies/video-tools" data-doc="taxonomies/video-tools.md">Video</a>
+      <a href="#taxonomies/music-tools" data-doc="taxonomies/music-tools.md">Music</a>
+      <a href="#taxonomies/speech-tools" data-doc="taxonomies/speech-tools.md">Speech and voice</a>
+      <a href="#taxonomies/document-tools" data-doc="taxonomies/document-tools.md">Documents</a>
+      <a href="#taxonomies/vision-3d-tools" data-doc="taxonomies/vision-3d-tools.md">Vision and 3D</a>
+      <a href="#taxonomies/retrieval-tools" data-doc="taxonomies/retrieval-tools.md">Retrieval and RAG</a>
+      <a href="#taxonomies/code-tools" data-doc="taxonomies/code-tools.md">Code</a>
+      <a href="#taxonomies/time-series-tools" data-doc="taxonomies/time-series-tools.md">Time series</a>
+  </div>
+  <div class="club-doc" data-doc-target="taxonomies"></div>
+</div>
+
+<div class="club-panel" data-panel="glossary" role="tabpanel" hidden>
+  <div class="club-doc" data-doc-target="glossary" data-doc-src="glossary.md"></div>
+</div>
+
+<div class="club-panel" data-panel="method" role="tabpanel" hidden>
+  <div class="club-doc" data-doc-target="method" data-doc-src="research-method.md"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js" defer></script>
+<script src="club.js?v={{ site.time | date: '%s' }}" defer></script>
 
 <p><strong>Principles</strong>: facts from the official source, dated; feedback from people who ran the model, summarised in our own words with the link; open licences and safe formats (safetensors, GGUF) shown first; no model weights in the repository.</p>
 
