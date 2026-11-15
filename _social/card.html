@@ -22,7 +22,7 @@
   body { display: flex; align-items: center; gap: 56px; padding: 0 64px 0 72px; box-sizing: border-box; }
   .text { flex: 1; }
   .name { display: block; font-size: 28px; margin-bottom: 40px; }
-  h1 { font-size: 62px; margin-bottom: 40px; }
+  h1 { font-size: 56px; margin-bottom: 40px; }
   .url { color: var(--accent); font-size: 24px; font-weight: 500; }
   #board { width: 500px; height: 500px; flex: none; }
   /* board.js writes to these; the card does not show them. */
@@ -32,10 +32,30 @@
 <body>
   <div class="text">
     <span class="name">François Cardinaux</span>
-    <h1>Code, notes, and the occasional <em>chess position</em>.</h1>
+    <h1>Whispering to <span class="nw">AI&nbsp;<svg class="h1-chip" viewBox="30 40 140 145" aria-hidden="true"><g stroke="#9aa3ad" stroke-width="7" stroke-linecap="round" fill="none"><path d="M30 80h12M30 104h12M30 128h12M158 80h12M158 104h12M158 128h12M74 160v18M126 160v18"/></g><rect x="42" y="50" width="116" height="110" rx="16" fill="#3b4148"/><circle cx="80" cy="96" r="17" fill="#fff"/><circle cx="120" cy="96" r="17" fill="#fff"/><ellipse cx="80" cy="96" rx="7" ry="8" fill="#1d1d1f"><animate attributeName="ry" dur="6.5s" repeatCount="indefinite" values="8;8;0.6;8;8;0.6;8;0.6;8;8" keyTimes="0;0.36;0.38;0.40;0.72;0.74;0.76;0.78;0.80;1"/></ellipse><ellipse cx="120" cy="96" rx="7" ry="8" fill="#1d1d1f"><animate attributeName="ry" dur="6.5s" repeatCount="indefinite" values="8;8;0.6;8;8;0.6;8;0.6;8;8" keyTimes="0;0.36;0.38;0.40;0.72;0.74;0.76;0.78;0.80;1"/></ellipse><path d="M86 126 q14 11 28 0" fill="none" stroke="#e8c27a" stroke-width="5" stroke-linecap="round"/></svg></span><br>Listening to <span class="nw"><em>Knights</em>&nbsp;<svg class="h1-knight" viewBox="0 0 260 260" aria-hidden="true"><defs><clipPath id="h1knightclip"><path d="M2720 1497h260v260h-260z"/></clipPath></defs><g clip-path="url(#h1knightclip)" transform="matrix(.95 0 0 .95 -2577.325 -1415.625)"><path  fill-rule="evenodd" d="M2837.03 1575.38c-9.78 0-17.71 7.97-17.71 17.79 0 9.83 7.93 17.79 17.71 17.79s17.71-7.96 17.71-17.79c0-9.82-7.93-17.79-17.71-17.79m43.42-19.8c-9.78 0-17.71 7.97-17.71 17.79 0 9.83 7.93 17.79 17.71 17.79s17.71-7.96 17.71-17.79c0-9.82-7.93-17.79-17.71-17.79M2778.77 1521l53.6 19.62 15.12-6.39c9.51-2.64 19.53-4.14 30.07-4.58 42.16-1.77 79.67 10.29 81.41 53.93 1.2 30.01-38.89 49.32-73.65 58.33l-1.76.42 22.81 91.67h-155.06c-.64-28.1-.62-72.16 10.13-109.41l6.87-15.98-20.31-58.53 41.66 13z"/><ellipse class="lid" cx="2837.03" cy="1593.17" rx="23.71" ry="23.79" /><ellipse class="lid" cx="2880.45" cy="1573.37" rx="23.71" ry="23.79" /></g></svg></span></h1>
+    <style>
+      h1 .nw { white-space: nowrap; }
+      h1 .h1-chip { display:inline-block; width:.78em; height:.8em; vertical-align:-.06em; }
+      h1 .h1-knight { display:inline-block; width:.95em; height:.95em; vertical-align:-.12em; fill: var(--accent); }
+      /* Same knight and same eyelids as on the board (kiwen-suwi, credited under the board); here the blink is a CSS loop. */
+      h1 .h1-knight .lid { animation: h1blink 8s ease-in-out infinite; }
+      @keyframes h1blink { 0%, 60%, 64%, 100% { transform: scaleY(0); } 62% { transform: scaleY(1); } }
+      @media (prefers-reduced-motion: reduce) { h1 .h1-knight .lid { animation: none; } }
+    </style>
     <div class="url">fcardinaux.github.io</div>
   </div>
-  <svg id="board" viewBox="0 0 100 100"></svg>
+  <div class="boardbox">
+    <svg id="board" viewBox="0 0 100 100"></svg>
+    <svg class="board-pins" viewBox="0 0 100 100" aria-hidden="true"><rect x="10.125" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="15.375" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="20.625" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="25.875" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="31.125" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="36.375" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="41.625" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="46.875" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="52.125" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="57.375" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="62.625" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="67.875" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="73.125" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="78.375" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="83.625" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="88.875" y="-1.8" width="1.0" height="1.8" rx=".3"/><rect x="92" y="2.125" width="1.8" height="1.0" rx=".3"/><rect x="92" y="7.375" width="1.8" height="1.0" rx=".3"/><rect x="92" y="12.625" width="1.8" height="1.0" rx=".3"/><rect x="92" y="17.875" width="1.8" height="1.0" rx=".3"/><rect x="92" y="23.125" width="1.8" height="1.0" rx=".3"/><rect x="92" y="28.375" width="1.8" height="1.0" rx=".3"/><rect x="92" y="33.625" width="1.8" height="1.0" rx=".3"/><rect x="92" y="38.875" width="1.8" height="1.0" rx=".3"/><rect x="92" y="44.125" width="1.8" height="1.0" rx=".3"/><rect x="92" y="49.375" width="1.8" height="1.0" rx=".3"/><rect x="92" y="54.625" width="1.8" height="1.0" rx=".3"/><rect x="92" y="59.875" width="1.8" height="1.0" rx=".3"/><rect x="92" y="65.125" width="1.8" height="1.0" rx=".3"/><rect x="92" y="70.375" width="1.8" height="1.0" rx=".3"/><rect x="92" y="75.625" width="1.8" height="1.0" rx=".3"/><rect x="92" y="80.875" width="1.8" height="1.0" rx=".3"/></svg>
+  </div>
+    <style>
+      /* Chip pins along the top and right edges of the board: a separate layer, the board itself is unchanged. */
+      .boardbox { position: relative; width: 500px; height: 500px; flex: none; }
+      svg.board-pins { position: absolute; top: 0; left: 0; width: 500px; height: 500px; overflow: visible; pointer-events: none; fill: var(--pin); }
+      :root { --pin: #33403b; }
+      @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --pin: #cfcdc6; } }
+      :root[data-theme="light"] { --pin: #cfcdc6; }
+    </style>
   <span id="caption"></span><a id="lichess"></a><button id="another" type="button"></button>
   <script src="../assets/js/pieces.js"></script>
   <script src="../assets/js/board.js"></script>

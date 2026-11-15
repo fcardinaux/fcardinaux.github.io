@@ -12,10 +12,10 @@
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 155 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
-  <meta property="og:image" content="{{ '/assets/social.png' | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/social.png' | absolute_url }}?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Code, notes, and the occasional chess position — a chess board beside the words">
+  <meta property="og:image:alt" content="Whispering to AI, Listening to Knights — a chess board beside the words">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@{{ site.twitter_username }}">
 
