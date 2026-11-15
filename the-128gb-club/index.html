@@ -1,0 +1,76 @@
+---
+layout: page
+title: The 128 GB Club
+description: Open-weight AI models for machines with 128 GB of unified memory - what fits, what runs, and what users say.
+---
+<style>
+  .club-hero { display:flex; gap:24px; align-items:center; flex-wrap:wrap; margin:8px 0 24px; }
+  .club-hero .logo { width:120px; height:120px; flex:none; }
+  .club-hero .chip { width:120px; height:120px; flex:none; }
+  .club-hero p { flex:1 1 200px; margin:0; font-size:1.1em; }
+  .club-parts { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap:14px; margin:16px 0 24px; }
+  .club-parts div { border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:var(--surface); }
+  .club-parts h3 { margin:0 0 6px; font-size:1em; }
+  .club-parts p { margin:0; color:var(--muted); font-size:.95em; }
+  .club-cta a { font-weight:600; }
+</style>
+
+<div class="club-hero">
+  <svg class="logo" viewBox="0 0 200 200" role="img" aria-label="The 128 GB Club logo">
+      <g stroke="#e8c27a" stroke-width="5" stroke-linecap="round" opacity=".8">
+        <path d="M64 22v12M100 22v12M136 22v12M64 166v12M100 166v12M136 166v12"/>
+        <path d="M22 64h12M22 100h12M22 136h12M166 64h12M166 100h12M166 136h12"/>
+      </g>
+      <rect x="34" y="34" width="132" height="132" rx="22" fill="#2f4a3a"/>
+      <rect x="44" y="44" width="112" height="112" rx="15" fill="none" stroke="#e8c27a" stroke-width="2.5"/>
+      <text x="100" y="114" text-anchor="middle" font-family="-apple-system, Helvetica, sans-serif" font-weight="900" font-size="50" letter-spacing="-1" fill="#e8c27a">128</text>
+      <text x="100" y="140" text-anchor="middle" font-family="-apple-system, Helvetica, sans-serif" font-weight="700" font-size="13" letter-spacing="3" fill="#f3ead6">GB CLUB</text>
+</svg>
+  <p>Open-weight AI models for the lucky owners of <strong>128&nbsp;GB of unified memory</strong>: what fits, what runs, and what the people who actually use them say.</p>
+  <svg class="chip" viewBox="0 0 200 200" role="img" aria-label="A memory chip with blinking eyes"><defs><symbol id="eye" viewBox="-6 -7 12 14">
+      <ellipse cx="0" cy="0" rx="5" ry="6" fill="#1d1d1f">
+        <animate attributeName="ry" dur="6.5s" repeatCount="indefinite"
+          values="6;6;0.5;6;6;0.5;6;0.5;6;6"
+          keyTimes="0;0.36;0.38;0.40;0.72;0.74;0.76;0.78;0.80;1"/>
+      </ellipse>
+      <circle cx="1.6" cy="-2" r="1.6" fill="#fff">
+        <animate attributeName="opacity" dur="6.5s" repeatCount="indefinite"
+          values="1;1;0;1;1;0;1;0;1;1"
+          keyTimes="0;0.36;0.38;0.40;0.72;0.74;0.76;0.78;0.80;1"/>
+      </circle>
+    </symbol></defs>
+      <!-- broches latérales -->
+      <g stroke="#9aa3ad" stroke-width="6" stroke-linecap="round">
+        <path d="M30 76h12M30 98h12M30 120h12M158 76h12M158 98h12M158 120h12"/>
+      </g>
+      <!-- pieds -->
+      <g stroke="#9aa3ad" stroke-width="6" stroke-linecap="round" fill="none">
+        <path d="M74 158v18h-8"/><path d="M126 158v18h8"/>
+      </g>
+      <rect x="42" y="50" width="116" height="110" rx="14" fill="#3b4148"/>
+      <rect x="50" y="58" width="100" height="94" rx="9" fill="none" stroke="#5c646d" stroke-width="2.5"/>
+      <circle cx="60" cy="68" r="4" fill="#5c646d"/>
+      <!-- yeux -->
+      <circle cx="80" cy="94" r="15" fill="#fff"/><circle cx="120" cy="94" r="15" fill="#fff"/>
+      <use href="#eye" x="73" y="86" width="14" height="17"/>
+      <use href="#eye" x="113" y="86" width="14" height="17"/>
+      <!-- sourire -->
+      <path d="M88 118 q12 9 24 0" fill="none" stroke="#e8c27a" stroke-width="3.5" stroke-linecap="round"/>
+      <text x="100" y="144" text-anchor="middle" font-family="-apple-system, Helvetica, sans-serif" font-weight="800" font-size="15" letter-spacing="1" fill="#e8c27a">128 GB</text>
+</svg>
+</div>
+
+<p>Every model is judged against the same 128&nbsp;GB, so "fits" and "too large" mean something. Language, vision, OCR, image, video, speech, music, translation, time-series and more.</p>
+
+<p>For machines whose CPU and GPU share 128&nbsp;GB: <strong>Apple silicon</strong> Macs first (MLX, llama.cpp, Ollama), then <strong>AMD Ryzen AI Max+ (Strix Halo)</strong> and <strong>NVIDIA DGX Spark</strong>, where the same size limits apply.</p>
+
+<div class="club-parts">
+  <div><h3><a href="https://github.com/fcardinaux/the-128gb-club/blob/main/model-comparison.md">Model comparison</a></h3><p>One record per model: licence, size, formats, publisher, release date, runtimes, and short summaries of user feedback, always with the link and the date.</p></div>
+  <div><h3><a href="https://github.com/fcardinaux/the-128gb-club/tree/main/taxonomies">Taxonomies</a></h3><p>Image, music, speech, documents, vision and 3D, retrieval, code, video and time series: what each kind of model does, and the main open candidates.</p></div>
+  <div><h3><a href="https://github.com/fcardinaux/the-128gb-club/blob/main/glossary.md">Glossary</a></h3><p>Terms, software and organisations, with French, German and Italian translations.</p></div>
+  <div><h3><a href="https://github.com/fcardinaux/the-128gb-club/blob/main/research-method.md">Research method</a></h3><p>Where facts and feedback come from, how recent they must be, and how third-party conversions are checked.</p></div>
+</div>
+
+<p><strong>Principles</strong>: facts from the official source, dated; feedback from people who ran the model, summarised in our own words with the link; open licences and safe formats (safetensors, GGUF) shown first; no model weights in the repository.</p>
+
+<p class="club-cta"><a href="https://github.com/fcardinaux/the-128gb-club">The repository on GitHub ↗</a> · Code MIT, content CC BY 4.0.</p>
